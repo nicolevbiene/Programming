@@ -10,6 +10,7 @@ int main()
     while (isRunning)
     {
         int choice;
+        cout << "Options:" << endl;
         cout << "1) Option 1" << endl;
         cout << "2) Option 2" << endl;
         cout << "3) Option 3" << endl;
@@ -33,7 +34,7 @@ int main()
                 isRunning = false;
                 break;
             default:
-                cout << "invalid number\n";
+                cout << "invalid choice, choose again:\n";
                 break;
         }
     }
