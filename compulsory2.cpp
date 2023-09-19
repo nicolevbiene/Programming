@@ -33,6 +33,7 @@ int main()
                 isRunning = false;
                 break;
             default:
+                cout << "invalid number\n";
                 break;
         }
     }
