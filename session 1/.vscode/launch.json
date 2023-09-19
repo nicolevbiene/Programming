@@ -4,6 +4,7 @@
         {
             "name": "Debug",
             "type": "cppdbg",
+            "program": "test",
             "request": "launch",
             "args": [],
             "stopAtEntry": false,
