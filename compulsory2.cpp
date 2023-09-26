@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 using namespace std;
 
 void SimpleMath()
@@ -35,7 +36,7 @@ void SimpleMath()
         }
         cout << "Result:" << result << endl;
 
-        cout << "Do you want to continue?\n";
+        cout << "Do you want to continue, Y for yes, N for no?\n";
 
         bool isContinue = true;
 
