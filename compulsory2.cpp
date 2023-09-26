@@ -38,7 +38,7 @@ void SimpleMath()
         cout << "Do you want to continue?\n";
 
         bool isContinue = true;
-        
+
         while (isContinue)
         {
             char desision;
@@ -94,6 +94,89 @@ void setUpFactorial()
     }
 }
 
+void Polynomials()
+{
+    double a [4];
+    double b [4];
+    double result [4];
+
+    double coefficient;
+
+    cout << "please enter coefficient for x^3\n";
+    cin >> coefficient;
+    a[0] = coefficient; 
+    
+    cout << "please enter coefficient for x^2\n";
+    cin >> coefficient;
+    a[1] = coefficient;
+    
+    cout << "please enter coefficient for x\n";
+    cin >> coefficient;
+    a[2] = coefficient;
+
+    cout << "please enter the constent\n";
+    cin >> coefficient;
+    a[3] = coefficient;
+
+    cout << "add second polynomial\n";
+
+    cout << "please enter coefficient for x^3\n";
+    cin >> coefficient;
+    b[0] = coefficient;
+
+    cout << "please enter coefficient for x^2\n";
+    cin >> coefficient;
+    b[1] = coefficient;
+
+    cout << "please enter coefficient for x\n";
+    cin >> coefficient;
+    b[2] = coefficient;
+
+    cout << "please enter the constent\n";
+    cin >> coefficient;
+    b[3] = coefficient;
+
+    cout << "Result:\n";
+
+    result[0] = a[0] + b[0];
+    result[1] = a[1] + b[1];
+    result[2] = a[2] + b[2];
+    result[3] = a[3] + b[3];
+
+    cout << "adding polnomials\n";
+    cout << result[0] << "x^3" << endl;
+    cout << result[1] << "x^2" << endl;
+    cout << result[2] << "x" << endl;
+    cout << result[3] << endl;
+
+    result[0] = a[0] - b[0];
+    result[1] = a[1] - b[1];
+    result[2] = a[2] - b[2];
+    result[3] = a[3] - b[3];
+
+    cout << "substracting polnomials\n";
+    cout << result[0] << "x^3" << endl;
+    cout << result[1] << "x^2" << endl;
+    cout << result[2] << "x" << endl;
+    cout << result[3] << endl;
+
+    double prod [7];
+
+    for (int i = 0; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        prod[i + j] += a[i] * b[j];
+    }
+    cout << "multiply polnomials\n";
+    cout << prod[0] << "x^6" << endl;
+    cout << prod[1] << "x^5" << endl;
+    cout << prod[2] << "x^4" << endl;
+    cout << prod[3] << "x^3" << endl;
+    cout << prod[4] << "x^2" << endl;
+    cout << prod[5] << "x" << endl;
+    cout << prod[6] << endl;
+}
+
 int main()
 {
     bool isRunning = true;
@@ -104,7 +187,7 @@ int main()
         //cout << "Options:" << endl;
         cout << "1) SimpleMath" << endl;
         cout << "2) setUpFactorial" << endl;
-        cout << "3) Option 3" << endl;
+        cout << "3) Polynomials" << endl;
         cout << "4) Quit" << endl;
         cout << "Enter choice: ";
         cin >> choice;
@@ -120,7 +203,8 @@ int main()
                 setUpFactorial();
                 break;
             case 3:
-                cout << "you chose option 3\n";
+                cout << "you chose Polynomials\n";
+                Polynomials();
                 break;
             case 4:
                 cout << "you chose to quit\n";
